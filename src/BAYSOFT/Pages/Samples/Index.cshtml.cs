@@ -1,7 +1,6 @@
-﻿using BAYSOFT.Core.Application.Default.Samples.Queries.GetSamplesByFilter;
+﻿using BAYSOFT.Abstractions.Pages;
+using BAYSOFT.Core.Application.Default.Samples.Queries.GetSamplesByFilter;
 using BAYSOFT.Core.Domain.Entities.Default;
-using BAYSOFT.Infrastructures.Crosscutting;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ModelWrapper.Extensions.GetModels;
 using ModelWrapper.Extensions.Select;
 using System.Collections.Generic;

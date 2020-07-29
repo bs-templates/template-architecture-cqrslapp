@@ -1,4 +1,4 @@
-﻿using BAYSOFT.Infrastructures.Crosscutting;
+﻿using BAYSOFT.Abstractions.Pages;
 using Microsoft.Extensions.Logging;
 
 namespace BAYSOFT.Pages

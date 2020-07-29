@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BAYSOFT.Infrastructures.Crosscutting
+namespace BAYSOFT.Abstractions.Pages
 {
     public abstract class PageModelBase : PageModel
     {

@@ -1,6 +1,6 @@
-﻿using BAYSOFT.Core.Application.Default.Samples.Commands.PostSample;
+﻿using BAYSOFT.Abstractions.Pages;
+using BAYSOFT.Core.Application.Default.Samples.Commands.PostSample;
 using BAYSOFT.Core.Domain.Exceptions;
-using BAYSOFT.Infrastructures.Crosscutting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.ComponentModel.DataAnnotations;

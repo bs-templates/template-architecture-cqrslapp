@@ -1,7 +1,7 @@
-﻿using BAYSOFT.Core.Application.Default.Samples.Commands.DeleteSample;
+﻿using BAYSOFT.Abstractions.Pages;
+using BAYSOFT.Core.Application.Default.Samples.Commands.DeleteSample;
 using BAYSOFT.Core.Application.Default.Samples.Queries.GetSampleByID;
 using BAYSOFT.Core.Domain.Entities.Default;
-using BAYSOFT.Infrastructures.Crosscutting;
 using Microsoft.AspNetCore.Mvc;
 using ModelWrapper.Extensions.GetModel;
 using System.ComponentModel.DataAnnotations;
