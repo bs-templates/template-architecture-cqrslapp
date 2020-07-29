@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace BAYSOFT.Infrastructures.Exceptions
+namespace BAYSOFT.Core.Domain.Exceptions
 {
     public class BusinessException : Exception
     {

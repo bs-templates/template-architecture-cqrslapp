@@ -1683,4 +1683,6 @@
     <PackageReference Include="NetDevPack" Version="1.1.0" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

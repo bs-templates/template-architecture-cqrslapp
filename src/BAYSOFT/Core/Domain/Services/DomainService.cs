@@ -1,12 +1,10 @@
 ﻿using BAYSOFT.Core.Domain.Entities;
-using BAYSOFT.Core.Domain.Interfaces.Infrastructures.Data.Contexts;
+using BAYSOFT.Core.Domain.Exceptions;
 using BAYSOFT.Core.Domain.Interfaces.Services;
-using BAYSOFT.Infrastructures.Exceptions;
 using FluentValidation;
 using NetDevPack.Specification;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace BAYSOFT.Core.Domain.Services

@@ -1,8 +1,7 @@
 ﻿using BAYSOFT.Core.Application.Default.Samples.Commands.PostSample;
+using BAYSOFT.Core.Domain.Exceptions;
 using BAYSOFT.Infrastructures.Crosscutting;
-using BAYSOFT.Infrastructures.Exceptions;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
