@@ -33,7 +33,7 @@ namespace BAYSOFT.Pages.Samples
             }
             public SampleModel(Sample sample)
             {
-                SampleID = sample.SampleID;
+                SampleID = sample.Id;
                 Description = sample.Description;
             }
         }

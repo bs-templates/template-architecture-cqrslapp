@@ -1,6 +1,6 @@
 ﻿using BAYSOFT.Abstractions.Pages;
 using BAYSOFT.Core.Application.Default.Samples.Commands.PutSample;
-using BAYSOFT.Core.Application.Default.Samples.Queries.GetSampleByID;
+using BAYSOFT.Core.Application.Default.Samples.Queries.GetSampleById;
 using BAYSOFT.Core.Domain.Entities.Default;
 using Microsoft.AspNetCore.Mvc;
 using ModelWrapper.Extensions.GetModel;
@@ -20,9 +20,9 @@ namespace BAYSOFT.Pages.Samples
         }
         public async Task OnGetAsync(int id, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var query = new GetSampleByIDQuery();
+            var query = new GetSampleByIdQuery();
 
-            query.Project(x => x.SampleID = id);
+            query.Project(x => x.Id = id);
 
             var response = await Mediator.Send(query, cancellationToken);
 
@@ -40,7 +40,7 @@ namespace BAYSOFT.Pages.Samples
 
             command.Project(x =>
             {
-                x.SampleID = Input.SampleID;
+                x.Id = Input.SampleID;
                 x.Description = Input.Description;
             });
 
@@ -70,7 +70,7 @@ namespace BAYSOFT.Pages.Samples
             }
             public SampleModel(Sample sample)
             {
-                SampleID = sample.SampleID;
+                SampleID = sample.Id;
                 Description = sample.Description;
             }
         }

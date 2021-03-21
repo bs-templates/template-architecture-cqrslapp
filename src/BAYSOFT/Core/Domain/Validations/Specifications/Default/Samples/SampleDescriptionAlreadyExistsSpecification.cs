@@ -19,7 +19,7 @@ namespace BAYSOFT.Core.Domain.Validations.Specifications.Default.Samples
 
         public override Expression<Func<Sample, bool>> ToExpression()
         {
-            return sample => Context.Samples.Any(x => x.Description == sample.Description && x.SampleID != sample.SampleID);
+            return sample => Context.Samples.Any(x => x.Description == sample.Description && x.Id != sample.Id);
         }
     }
 }

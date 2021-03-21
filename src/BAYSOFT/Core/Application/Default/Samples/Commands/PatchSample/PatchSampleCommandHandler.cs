@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using BAYSOFT.Core.Domain.Entities.Default;
 using BAYSOFT.Core.Domain.Interfaces.Services.Default.Samples;
+using BAYSOFT.Abstractions.Core.Application;
 
 namespace BAYSOFT.Core.Application.Default.Samples.Commands.PatchSample
 {
@@ -23,9 +24,9 @@ namespace BAYSOFT.Core.Application.Default.Samples.Commands.PatchSample
         }
         public override async Task<PatchSampleCommandResponse> Handle(PatchSampleCommand request, CancellationToken cancellationToken)
         {
-            var id = request.Project(x => x.SampleID);
+            var id = request.Project(x => x.Id);
 
-            var data = await Context.Samples.SingleOrDefaultAsync(x => x.SampleID == id);
+            var data = await Context.Samples.SingleOrDefaultAsync(x => x.Id == id);
 
             if (data == null)
             {

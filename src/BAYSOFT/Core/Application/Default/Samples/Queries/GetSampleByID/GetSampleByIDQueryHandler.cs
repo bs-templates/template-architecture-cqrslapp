@@ -6,22 +6,24 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using BAYSOFT.Abstractions.Core.Application;
+using BAYSOFT.Core.Domain.Entities.Default;
 
-namespace BAYSOFT.Core.Application.Default.Samples.Queries.GetSampleByID
+namespace BAYSOFT.Core.Application.Default.Samples.Queries.GetSampleById
 {
-    public class GetSampleByIDQueryHandler : IRequestHandler<GetSampleByIDQuery, GetSampleByIDQueryResponse>
+    public class GetSampleByIdQueryHandler : ApplicationRequestHandler<Sample, GetSampleByIdQuery, GetSampleByIdQueryResponse>
     {
         private IDefaultDbContext Context { get; set; }
-        public GetSampleByIDQueryHandler(IDefaultDbContext context)
+        public GetSampleByIdQueryHandler(IDefaultDbContext context)
         {
             Context = context;
         }
-        public async Task<GetSampleByIDQueryResponse> Handle(GetSampleByIDQuery request, CancellationToken cancellationToken)
+        public override async Task<GetSampleByIdQueryResponse> Handle(GetSampleByIdQuery request, CancellationToken cancellationToken)
         {
-            var id = request.Project(x => x.SampleID);
+            var id = request.Project(x => x.Id);
 
             var data = await Context.Samples
-                .Where(x => x.SampleID == id)
+                .Where(x => x.Id == id)
                 .Select(request)
                 .AsNoTracking()
                 .SingleOrDefaultAsync();
@@ -31,7 +33,7 @@ namespace BAYSOFT.Core.Application.Default.Samples.Queries.GetSampleByID
                 throw new Exception("Sample not found!");
             }
 
-            return new GetSampleByIDQueryResponse(request, data, resultCount: 1);
+            return new GetSampleByIdQueryResponse(request, data, resultCount: 1);
         }
     }
 }
